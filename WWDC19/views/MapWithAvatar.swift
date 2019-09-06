@@ -15,7 +15,7 @@ struct MapWithAvatar: View {
             Avatar(imageName: "Los_Angeles").offset(CGSize(width: 0, height: -130)).padding(.bottom, -130)
             Text("Los Angeles")
             Spacer()
-        }
+        }.navigationBarTitle(Text("MapWithAvatar"),displayMode: .inline)
     }
 }
 

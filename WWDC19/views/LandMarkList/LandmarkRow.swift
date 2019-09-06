@@ -16,6 +16,9 @@ struct LandmarkRow: View {
         HStack{
             Image(landMark.imageName).resizable().frame(width: 50, height: 50)
             Text(landMark.name)
+            if(landMark.isFavorite){
+                Image(systemName: "star.fill").foregroundColor(Color.yellow)
+            }
         }
         
     }
@@ -23,6 +26,6 @@ struct LandmarkRow: View {
 
 struct LandmarkRow_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkRow(landMark: landmarkData[0])
+        LandmarkRow(landMark: landmarkData[0]).environmentObject(UserData())
     }
 }

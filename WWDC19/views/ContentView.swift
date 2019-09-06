@@ -15,13 +15,13 @@ struct ContentView: View {
                 NavigationLink(destination: MapView(latitude: 34.052235, longitude: -118.243683).navigationBarTitle(Text("Los Angeles"),displayMode: .inline)){
                     Text("MapView")
                 }
-                NavigationLink(destination: Avatar(imageName: "Los_Angeles").navigationBarTitle(Text("Avatar"),displayMode: .inline)){
+                NavigationLink(destination: Avatar(imageName: "Los_Angeles")){
                     Text("Avatar")
                 }
-                NavigationLink(destination: MapWithAvatar().navigationBarTitle(Text("MapWithAvatar"),displayMode: .inline)){
+                NavigationLink(destination: MapWithAvatar()){
                     Text("MapWithAvatar")
                 }
-                NavigationLink(destination: LandMarkList().navigationBarTitle(Text("LandMarkList"),displayMode: .inline)){
+                NavigationLink(destination: LandMarkList().environmentObject(UserData())){
                     Text("LandMarkList")
                 }
                 
@@ -32,6 +32,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+            ContentView()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
+    
+    
 }

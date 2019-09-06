@@ -9,13 +9,33 @@
 import SwiftUI
 
 struct LandMarkView: View {
+    
+    @EnvironmentObject var userdata:UserData
+    
     var landMark:Landmark
+    
+    var index: Int {
+        userdata.landmarks.firstIndex(where: { $0.id == landMark.id })!
+    }
     
     var body: some View {
         VStack(spacing: 20){
+            
             MapView(latitude: landMark.coordinates.latitude, longitude: landMark.coordinates.longitude).frame(height: 300)
             Avatar(imageName: landMark.imageName).offset(CGSize(width: 0, height: -130)).padding(.bottom, -130)
-            Text(landMark.name)
+            
+            HStack{
+                Text(landMark.name)
+                Button(action: {
+                    self.userdata.landmarks[self.index].isFavorite.toggle()
+                }){
+                    if(self.userdata.landmarks[self.index].isFavorite){
+                        Image(systemName: "star.fill").foregroundColor(Color.yellow)
+                    }else{
+                        Image(systemName: "star").foregroundColor(Color.black)
+                    }
+                }
+            }
             Spacer()
         }
     }
@@ -23,7 +43,7 @@ struct LandMarkView: View {
 
 struct LandMarkView_Previews: PreviewProvider {
     static var previews: some View {
-        LandMarkView(landMark: landmarkData[0])
+        LandMarkView(landMark: landmarkData[0]).environmentObject(UserData())
     }
 }
 
