@@ -18,11 +18,15 @@ struct ContentView: View {
                 NavigationLink(destination: Avatar(imageName: "Los_Angeles")){
                     Text("Avatar")
                 }
-                NavigationLink(destination: MapWithAvatar()){
+                NavigationLink(destination: LandmarkDetail(landmark: landmarkData[0])){
                     Text("MapWithAvatar")
                 }
                 NavigationLink(destination: LandMarkList().environmentObject(UserData())){
                     Text("LandMarkList")
+                }
+                
+                NavigationLink(destination: CategoryHome()){
+                    Text("CategoryHome")
                 }
                 
             }.navigationBarTitle(Text("WWDC19"))

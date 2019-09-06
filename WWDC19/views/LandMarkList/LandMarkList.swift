@@ -23,12 +23,12 @@ struct LandMarkList: View {
             ForEach(userdata.landmarks) { landMark in
                 if(self.userdata.showFavoritesOnly){
                     if(landMark.isFavorite){
-                        NavigationLink(destination: LandMarkView(landMark:landMark).navigationBarTitle(Text("LandMarkView"),displayMode: .inline)){
+                        NavigationLink(destination: LandmarkDetailWithStar(landMark:landMark).navigationBarTitle(Text("LandMarkView"),displayMode: .inline)){
                             LandmarkRow(landMark: landMark)
                         }
                     }
                 }else{
-                    NavigationLink(destination: LandMarkView(landMark:landMark).navigationBarTitle(Text("LandMarkView"),displayMode: .inline)){
+                    NavigationLink(destination: LandmarkDetailWithStar(landMark:landMark).navigationBarTitle(Text("LandMarkView"),displayMode: .inline)){
                         LandmarkRow(landMark: landMark)
                     }
                 }
