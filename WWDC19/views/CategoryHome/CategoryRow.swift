@@ -31,6 +31,6 @@ struct CategoryRow: View {
 
 struct CategoryRow_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryRow(name: landmarkData[0].name, items: Array(landmarkData.prefix(3)))
+        CategoryRow(name: landmarkData[0].name, items: Array(landmarkData.prefix(3))).previewLayout(.fixed(width: 440, height: 250))
     }
 }

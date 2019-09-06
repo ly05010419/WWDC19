@@ -26,6 +26,11 @@ struct CategoryItem: View {
 
 struct LandMarkItem_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryItem(landMark: landmarkData[0])
+        Group{
+            CategoryItem(landMark: landmarkData[0]).previewLayout(.fixed(width: 200, height: 200))
+            CategoryItem(landMark: landmarkData[1]).previewLayout(.fixed(width: 200, height: 200))
+            CategoryItem(landMark: landmarkData[2]).previewLayout(.fixed(width: 200, height: 200))
+        }
+        
     }
 }
