@@ -12,15 +12,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink(destination: MapView().navigationBarTitle(Text("MapView"),displayMode: .inline)){
+                NavigationLink(destination: MapView(latitude: 34.052235, longitude: -118.243683).navigationBarTitle(Text("Los Angeles"),displayMode: .inline)){
                     Text("MapView")
                 }
-                NavigationLink(destination: Avatar().navigationBarTitle(Text("Avatar"),displayMode: .inline)){
+                NavigationLink(destination: Avatar(imageName: "Los_Angeles").navigationBarTitle(Text("Avatar"),displayMode: .inline)){
                     Text("Avatar")
                 }
                 NavigationLink(destination: MapWithAvatar().navigationBarTitle(Text("MapWithAvatar"),displayMode: .inline)){
                     Text("MapWithAvatar")
                 }
+                NavigationLink(destination: LandMarkList().navigationBarTitle(Text("LandMarkList"),displayMode: .inline)){
+                    Text("LandMarkList")
+                }
+                
             }.navigationBarTitle(Text("WWDC19"))
         }
     }

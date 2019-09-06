@@ -9,13 +9,17 @@
 import SwiftUI
 
 struct Avatar: View {
+    
+    var imageName:String
+    
     var body: some View {
-        Image("001")
+        Image(imageName)
             .resizable()
-            .frame(width: 200, height: 200).cornerRadius(15)
-//            .clipShape(Circle())
-//            .overlay(Circle().stroke(Color.gray, lineWidth: 4))
-            .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.gray, lineWidth: 4))
+            .frame(width: 200, height: 200)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.gray, lineWidth: 4))
+//            .cornerRadius(15)
+//            .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.gray, lineWidth: 4))
             .shadow(radius: 10)
         
     }
@@ -23,6 +27,6 @@ struct Avatar: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        Avatar()
+        Avatar(imageName: "chilkoottrail")
     }
 }

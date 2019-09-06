@@ -11,9 +11,9 @@ import SwiftUI
 struct MapWithAvatar: View {
     var body: some View {
         VStack(spacing: 20){
-            MapView().frame(height: 300)
-            Avatar().offset(CGSize(width: 0, height: -130)).padding(.bottom, -130)
-            Text("Hello World!")
+            MapView(latitude: 34.052235, longitude: -118.243683).frame(height: 300)
+            Avatar(imageName: "Los_Angeles").offset(CGSize(width: 0, height: -130)).padding(.bottom, -130)
+            Text("Los Angeles")
             Spacer()
         }
     }
