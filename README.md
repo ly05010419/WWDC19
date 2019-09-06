@@ -2,8 +2,7 @@
 
 A new SwiftUI project 
 
-UIViewRepresentable, MapKit, CircleImage for Avatar, 
-
+UIViewRepresentable for MapKit, CircleImage for Avatar, Model , load Data, List, NavigationView, NavigationLink,
 
 ## Screenshot
 
