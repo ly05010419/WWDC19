@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CategoryHome: View {
     
+    @State var schowProfile:Bool = false
+    
     var categories: [String: [Landmark]] {
         Dictionary(
             grouping: landmarkData,
@@ -25,7 +27,15 @@ struct CategoryHome: View {
             ForEach(categories.keys.sorted(), id: \.self) { key in
                 CategoryRow(name: key, items: self.categories[key]!).listRowInsets(EdgeInsets())
             }
-        }.navigationBarTitle(Text("Featured"))
+        }.navigationBarTitle(Text("Featured")).navigationBarItems(trailing: Button(action: {
+            self.schowProfile.toggle()
+        }){
+            Image(systemName: "person.crop.circle")
+                .imageScale(.large)
+                .padding(.vertical,30).padding(.leading,30).padding(.trailing,10)
+        }).sheet(isPresented: $schowProfile){
+            ProfileView()
+        }
     }
 }
 
