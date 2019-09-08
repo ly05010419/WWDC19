@@ -26,11 +26,13 @@ struct CategoryItemLarge: View {
 
 struct CategoryItemLarge_Previews: PreviewProvider {
     static var previews: some View {
-        Group{
-            CategoryItemLarge(landMark: landmarkData[0]).previewLayout(.fixed(width: 200, height: 200))
-            CategoryItemLarge(landMark: landmarkData[1]).previewLayout(.fixed(width: 200, height: 200))
-            CategoryItemLarge(landMark: landmarkData[2]).previewLayout(.fixed(width: 200, height: 200))
-        }
         
+        CategoryItemLarge(landMark: landmarkData[0])
+        
+//        Group{
+//            CategoryItemLarge(landMark: landmarkData[0]).previewLayout(.fixed(width: 200, height: 250))
+//            CategoryItemLarge(landMark: landmarkData[1]).previewLayout(.fixed(width: 200, height: 250))
+//            CategoryItemLarge(landMark: landmarkData[2]).previewLayout(.fixed(width: 200, height: 250))
+//        }
     }
 }

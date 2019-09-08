@@ -24,7 +24,7 @@ struct CategoryHome: View {
         List {
             Image("Los_Angeles").resizable().aspectRatio(contentMode: .fill).frame(height: 200).clipped().listRowInsets(EdgeInsets())
             
-            CategoryRowWithEffect(name: "All",items: Array(landmarkData)).frame(height: 350).listRowInsets(EdgeInsets())
+            CategoryRowWithEffect(name: "All",items: Array(landmarkData)).frame(height: 310).listRowInsets(EdgeInsets())
             
             ForEach(categories.keys.sorted(), id: \.self) { key in
                 CategoryRow(name: key, items: self.categories[key]!).listRowInsets(EdgeInsets())
@@ -43,6 +43,6 @@ struct CategoryHome: View {
 
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryHome()
+        CategoryHome().previewDevice(PreviewDevice(rawValue: "iPhone XR"))
     }
 }

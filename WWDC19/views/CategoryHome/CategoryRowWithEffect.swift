@@ -32,7 +32,19 @@ struct CategoryRowWithEffect: View {
 }
 
 struct CategoryRowWithEffect_Previews: PreviewProvider {
+    
+    static var categories: [String: [Landmark]] {
+       Dictionary(grouping: landmarkData,by: { $0.category.rawValue })
+    }
+    
     static var previews: some View {
-        CategoryRowWithEffect(name: landmarkData[0].name, items: Array(landmarkData.prefix(3))).previewLayout(.fixed(width: 440, height: 250))
+        
+        CategoryRowWithEffect(name:"Lakes",items:categories["Lakes"]!)
+        
+//        ForEach(categories.keys.sorted(), id: \.self) { key in
+//            CategoryRowWithEffect(name:key,items:categories[key]!)
+//                .previewLayout(.fixed(width: UIScreen.main.bounds.size.width, height: 350))
+//        }
+        
     }
 }

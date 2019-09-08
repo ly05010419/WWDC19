@@ -36,6 +36,7 @@ struct LandmarkDetailWithStar: View {
                     }
                 }
             }
+            CategoryRowWithEffect(name: "All",items: Array(landmarkData)).frame(height: 310).listRowInsets(EdgeInsets())
             Spacer()
         }
     }
