@@ -1,15 +1,6 @@
-//
-//  CircleImage.swift
-//  WWDC19
-//
-//  Created by LiYong on 02.09.19.
-//  Copyright © 2019 Liyong. All rights reserved.
-//
-
 import SwiftUI
 
 struct Avatar: View {
-    
     var imageName:String
     
     var body: some View {
