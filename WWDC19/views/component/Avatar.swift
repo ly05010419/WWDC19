@@ -19,3 +19,8 @@ struct CircleImage_Previews: PreviewProvider {
         Avatar(imageName: "chilkoottrail")
     }
 }
+
+
+
+
+
