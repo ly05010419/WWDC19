@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct Avatar: View {
@@ -12,15 +13,22 @@ struct Avatar: View {
             .shadow(radius: 10)
             .navigationBarTitle(Text("Avatar"),displayMode: .inline)
     }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
         Avatar(imageName: "chilkoottrail")
     }
 }
-
-
-
-
-
