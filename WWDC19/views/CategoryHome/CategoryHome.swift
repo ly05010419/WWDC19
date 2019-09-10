@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  WWDC19_2
-//
-//  Created by LiYong on 06.09.19.
-//  Copyright © 2019 Liyong. All rights reserved.
-//
 
 import SwiftUI
 
@@ -39,7 +32,17 @@ struct CategoryHome: View {
             ProfileView()
         }
     }
+    
 }
+
+
+
+
+
+
+
+
+
 
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
