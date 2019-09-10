@@ -28,8 +28,19 @@ struct LandmarkDetail: View {
 
 
 
+
+
+
+
+
+
+
+
+
 struct MapWithAvatar_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail(landmark: landmarkData[0])
+        ForEach(["iPhone 7","iPhone XR","iPad Air 2"], id:\.self ){ key in
+            LandmarkDetail(landmark: landmarkData[0]).previewDevice(PreviewDevice(rawValue: key))
+        }
     }
 }
