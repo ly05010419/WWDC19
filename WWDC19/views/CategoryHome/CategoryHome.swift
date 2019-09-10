@@ -2,7 +2,6 @@
 import SwiftUI
 
 struct CategoryHome: View {
-    
     @State var schowProfile:Bool = false
     
     var categories: [String: [Landmark]] {
@@ -13,12 +12,14 @@ struct CategoryHome: View {
     }
     
     var body: some View {
-        
         List {
-            Image("Los_Angeles").resizable().aspectRatio(contentMode: .fill).frame(height: 200).clipped().listRowInsets(EdgeInsets())
-            
-            CategoryRowWithEffect(name: "All",items: Array(landmarkData)).frame(height: 310).listRowInsets(EdgeInsets())
-            
+            Image("Los_Angeles").resizable().aspectRatio(contentMode: .fill)
+                .frame(height: 200)
+                .clipped()
+                .listRowInsets(EdgeInsets())
+            CategoryRowWithEffect(name: "All",items: Array(landmarkData))
+                .frame(height: 310)
+                .listRowInsets(EdgeInsets())
             ForEach(categories.keys.sorted(), id: \.self) { key in
                 CategoryRow(name: key, items: self.categories[key]!).listRowInsets(EdgeInsets())
             }
@@ -31,6 +32,7 @@ struct CategoryHome: View {
         }).sheet(isPresented: $schowProfile){
             ProfileView()
         }
+        
     }
     
 }
