@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5158C6B990C8AB2F7ACED1 /* Pods_WWDC19_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1C39913CAB109AF59F341F /* Pods_WWDC19_SwiftUI.framework */; };
 		B10F066B2322490900831675 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10F066A2322490900831675 /* Landmark.swift */; };
 		B10F066E23224B8600831675 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = B10F066D23224B8600831675 /* landmarkData.json */; };
 		B10F067023224C9700831675 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10F066F23224C9700831675 /* Service.swift */; };
@@ -32,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08760C5ABAA3F004CECF295F /* Pods-WWDC19-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC19-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-WWDC19-SwiftUI/Pods-WWDC19-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		6E1C39913CAB109AF59F341F /* Pods_WWDC19_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WWDC19_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B65262699A8E0B670220FD9 /* Pods-WWDC19-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWDC19-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-WWDC19-SwiftUI/Pods-WWDC19-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		B10F066A2322490900831675 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		B10F066D23224B8600831675 /* landmarkData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 		B10F066F23224C9700831675 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -63,12 +67,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5158C6B990C8AB2F7ACED1 /* Pods_WWDC19_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88E69611BC709BB7C9F0367F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08760C5ABAA3F004CECF295F /* Pods-WWDC19-SwiftUI.debug.xcconfig */,
+				8B65262699A8E0B670220FD9 /* Pods-WWDC19-SwiftUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92612EF575F2DC8655C835C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E1C39913CAB109AF59F341F /* Pods_WWDC19_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B10F066C2322491300831675 /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +141,8 @@
 			children = (
 				B1BEB8C2231D5B0F000F6EDC /* WWDC19 */,
 				B1BEB8C1231D5B0F000F6EDC /* Products */,
+				88E69611BC709BB7C9F0367F /* Pods */,
+				92612EF575F2DC8655C835C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1BEB8D4231D5B14000F6EDC /* Build configuration list for PBXNativeTarget "WWDC19-SwiftUI" */;
 			buildPhases = (
+				2C4B49F6E00AB7162DA3ECC9 /* [CP] Check Pods Manifest.lock */,
 				B1BEB8BC231D5B0F000F6EDC /* Sources */,
 				B1BEB8BD231D5B0F000F6EDC /* Frameworks */,
 				B1BEB8BE231D5B0F000F6EDC /* Resources */,
+				76F15FCE8E17995BF27F7B4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,6 +256,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C4B49F6E00AB7162DA3ECC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WWDC19-SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76F15FCE8E17995BF27F7B4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WWDC19-SwiftUI/Pods-WWDC19-SwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WWDC19-SwiftUI/Pods-WWDC19-SwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WWDC19-SwiftUI/Pods-WWDC19-SwiftUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1BEB8BC231D5B0F000F6EDC /* Sources */ = {
@@ -386,6 +455,7 @@
 		};
 		B1BEB8D5231D5B14000F6EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08760C5ABAA3F004CECF295F /* Pods-WWDC19-SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +476,7 @@
 		};
 		B1BEB8D6231D5B14000F6EDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B65262699A8E0B670220FD9 /* Pods-WWDC19-SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

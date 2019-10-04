@@ -1,19 +1,21 @@
 import SwiftUI
-import MapKit
+import GoogleMaps
 
 struct MapView: UIViewRepresentable {
-    var latitude:Double
-    var longitude:Double
+    var landmark:Landmark
     
-    func makeUIView(context: Context) -> MKMapView {
-        MKMapView(frame: .zero)
+    func makeUIView(context: Context) -> GMSMapView {
+        let camera = GMSCameraPosition.camera(withLatitude: self.landmark.coordinates.latitude,
+                                              longitude: self.landmark.coordinates.longitude,
+                                              zoom: 7.5)
+        return GMSMapView.map(withFrame: CGRect.zero, camera: camera)
     }
-
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-        let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
-        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        uiView.setRegion(region, animated: true)
+    
+    func updateUIView(_ uiView: GMSMapView, context: Context) {
+        let marker = GMSMarker()
+        marker.position = uiView.camera.target
+        marker.title = landmark.name
+        marker.map = uiView
     }
     
 }
@@ -27,7 +29,7 @@ struct MapView: UIViewRepresentable {
 
 struct MapKitDemo_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(latitude: 34.011286, longitude: -116.166868)
+        MapView(landmark: landmarkData[0])
     }
 }
 

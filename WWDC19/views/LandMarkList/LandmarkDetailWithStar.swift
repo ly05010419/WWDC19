@@ -21,7 +21,7 @@ struct LandmarkDetailWithStar: View {
     var body: some View {
         VStack(spacing: 20){
             
-            MapView(latitude: landMark.coordinates.latitude, longitude: landMark.coordinates.longitude).frame(height: 300)
+            MapView(landmark: landMark).frame(height: 300)
             Avatar(imageName: landMark.imageName).offset(CGSize(width: 0, height: -130)).padding(.bottom, -130)
             
             HStack{

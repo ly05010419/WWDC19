@@ -8,7 +8,7 @@ struct LandmarkDetail: View {
     
     var body: some View {
         VStack(spacing: 20){
-            MapView(latitude: landmark.coordinates.latitude, longitude: landmark.coordinates.longitude)
+            MapView(landmark: landmark)
                 .frame(height: 300)
             Avatar(imageName: landmark.imageName)
                 .offset(CGSize(width: 0, height: -130))

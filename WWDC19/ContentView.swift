@@ -21,7 +21,7 @@ struct ContentView: View {
                 NavigationLink(destination: Avatar(imageName: "Los_Angeles")){
                     Text("Avatar")
                 }
-                NavigationLink(destination: MapView(latitude: 34.052235, longitude: -118.243683).navigationBarTitle(Text("Los Angeles"),displayMode: .inline)){
+                NavigationLink(destination: MapView(landmark: landmarkData[0]).navigationBarTitle(Text("Los Angeles"),displayMode: .inline)){
                     Text("MapView")
                 }
 
