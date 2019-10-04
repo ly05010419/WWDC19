@@ -12,23 +12,23 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink(destination: MapView(latitude: 34.052235, longitude: -118.243683).navigationBarTitle(Text("Los Angeles"),displayMode: .inline)){
-                    Text("MapView")
-                }
-                NavigationLink(destination: Avatar(imageName: "Los_Angeles")){
-                    Text("Avatar")
+                NavigationLink(destination: CategoryHome()){
+                    Text("Home")
                 }
                 NavigationLink(destination: LandmarkDetail(landmark: landmarkData[0])){
                     Text("MapWithAvatar")
                 }
-                NavigationLink(destination: LandMarkList().environmentObject(UserData())){
-                    Text("LandMarkList")
+                NavigationLink(destination: Avatar(imageName: "Los_Angeles")){
+                    Text("Avatar")
                 }
-                
-                NavigationLink(destination: CategoryHome()){
-                    Text("CategoryHome")
+                NavigationLink(destination: MapView(latitude: 34.052235, longitude: -118.243683).navigationBarTitle(Text("Los Angeles"),displayMode: .inline)){
+                    Text("MapView")
                 }
-                
+
+//                NavigationLink(destination: LandMarkList().environmentObject(UserData())){
+//                    Text("LandMarkList")
+//                }
+
             }.navigationBarTitle(Text("WWDC19"))
         }
     }

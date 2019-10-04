@@ -45,7 +45,7 @@
 		B1776F222322A80700985FDA /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		B1776F232322A80700985FDA /* CategoryHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		B1776F242322A80700985FDA /* CategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
-		B1BEB8C0231D5B0F000F6EDC /* WWDC19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC19.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BEB8C0231D5B0F000F6EDC /* DemoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BEB8C3231D5B0F000F6EDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BEB8C5231D5B0F000F6EDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B1BEB8C7231D5B0F000F6EDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		B1BEB8C1231D5B0F000F6EDC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1BEB8C0231D5B0F000F6EDC /* WWDC19.app */,
+				B1BEB8C0231D5B0F000F6EDC /* DemoSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1BEB8BF231D5B0F000F6EDC /* WWDC19 */ = {
+		B1BEB8BF231D5B0F000F6EDC /* WWDC19-SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1BEB8D4231D5B14000F6EDC /* Build configuration list for PBXNativeTarget "WWDC19" */;
+			buildConfigurationList = B1BEB8D4231D5B14000F6EDC /* Build configuration list for PBXNativeTarget "WWDC19-SwiftUI" */;
 			buildPhases = (
 				B1BEB8BC231D5B0F000F6EDC /* Sources */,
 				B1BEB8BD231D5B0F000F6EDC /* Frameworks */,
@@ -178,9 +178,9 @@
 			);
 			dependencies = (
 			);
-			name = WWDC19;
+			name = "WWDC19-SwiftUI";
 			productName = WWDC19;
-			productReference = B1BEB8C0231D5B0F000F6EDC /* WWDC19.app */;
+			productReference = B1BEB8C0231D5B0F000F6EDC /* DemoSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B1BEB8BB231D5B0F000F6EDC /* Build configuration list for PBXProject "WWDC19" */;
+			buildConfigurationList = B1BEB8BB231D5B0F000F6EDC /* Build configuration list for PBXProject "WWDC19-SwiftUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -211,7 +211,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1BEB8BF231D5B0F000F6EDC /* WWDC19 */,
+				B1BEB8BF231D5B0F000F6EDC /* WWDC19-SwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -397,8 +397,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ly05010419.WWDC19;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ly05010419.WWDC19-SwiftUI";
+				PRODUCT_NAME = DemoSwiftUI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,8 +417,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ly05010419.WWDC19;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ly05010419.WWDC19-SwiftUI";
+				PRODUCT_NAME = DemoSwiftUI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1BEB8BB231D5B0F000F6EDC /* Build configuration list for PBXProject "WWDC19" */ = {
+		B1BEB8BB231D5B0F000F6EDC /* Build configuration list for PBXProject "WWDC19-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1BEB8D2231D5B14000F6EDC /* Debug */,
@@ -436,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1BEB8D4231D5B14000F6EDC /* Build configuration list for PBXNativeTarget "WWDC19" */ = {
+		B1BEB8D4231D5B14000F6EDC /* Build configuration list for PBXNativeTarget "WWDC19-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1BEB8D5231D5B14000F6EDC /* Debug */,

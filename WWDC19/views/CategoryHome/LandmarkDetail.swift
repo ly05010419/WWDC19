@@ -1,4 +1,6 @@
 
+
+
 import SwiftUI
 
 struct LandmarkDetail: View {
@@ -39,8 +41,9 @@ struct LandmarkDetail: View {
 
 struct MapWithAvatar_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone 7","iPhone XR","iPad Air 2"], id:\.self ){ key in
-            LandmarkDetail(landmark: landmarkData[0]).previewDevice(PreviewDevice(rawValue: key))
-        }
+        LandmarkDetail(landmark: landmarkData[0]).previewDevice(PreviewDevice(rawValue: "iPhone XR"))
+//        ForEach(["iPhone 7","iPhone XR","iPad Air 2"], id:\.self ){ key in
+//            LandmarkDetail(landmark: landmarkData[0]).previewDevice(PreviewDevice(rawValue: key))
+//        }
     }
 }
