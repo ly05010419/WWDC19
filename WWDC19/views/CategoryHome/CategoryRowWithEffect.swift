@@ -21,11 +21,12 @@ struct CategoryRowWithEffect: View {
                     ForEach(self.items){landmark in
                         GeometryReader{ geometry in
                             NavigationLink(destination: LandmarkDetail(landmark: landmark)){
-                                CategoryItemLarge(landMark: landmark).rotation3DEffect(Angle(degrees: Double((geometry.frame(in: .global).minX-20) / -10)), axis: (x: 0, y: 10, z: 0))
+                                CategoryItem(landMark: landmark,width: 160,height: 200).rotation3DEffect(Angle(degrees: Double((geometry.frame(in: .global).minX-20) / -10)), axis: (x: 0, y: 10, z: 0))
                             }
                         }.frame(width: 160, height: 270)
                     }
-                }.padding(.leading,20).padding(.trailing,230)
+                }
+                .padding(.leading,15).padding(.trailing,240)
             }
         }
     }

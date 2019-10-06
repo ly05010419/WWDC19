@@ -10,15 +10,18 @@ import SwiftUI
 
 struct CategoryItem: View {
     var landMark:Landmark
+    var width:CGFloat = 150
+    var height:CGFloat = 150
     
     var body: some View {
         VStack(alignment: .leading){
             Image(landMark.imageName)
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 150, height: 150)
+                .frame(width: width, height: height)
                 .cornerRadius(5)
-                .shadow(radius: 5)
+                .shadow(color: .gray, radius: 4, x: 4, y: 4)
+            
             Text(landMark.name).lineLimit(1).font(.caption).foregroundColor(Color.black)
         }
     }

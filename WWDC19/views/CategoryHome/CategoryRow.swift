@@ -14,13 +14,13 @@ struct CategoryRow: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text(name).font(.title).bold().padding(.leading, 15).padding(.top, 5)
+            Text(name).font(.title).bold().padding(.leading, 15)
             
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
                     ForEach(self.items){landmark in
                         NavigationLink(destination: LandmarkDetail(landmark: landmark)){
-                            CategoryItem(landMark: landmark).padding(10)
+                            CategoryItem(landMark: landmark,width: 150,height: 150).padding(.leading,15).padding(.trailing,0).padding(.vertical,5)
                         }
                     }
                 }
