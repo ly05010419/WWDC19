@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CategoryRowWithEffect: View {
+struct RowViewWithCard: View {
     var name:String
     var items:[Landmark]
     
@@ -21,7 +21,7 @@ struct CategoryRowWithEffect: View {
                     ForEach(self.items){landmark in
                         GeometryReader{ geometry in
                             NavigationLink(destination: LandmarkDetail(landmark: landmark)){
-                                CategoryItem(landMark: landmark,width: 160,height: 200).rotation3DEffect(Angle(degrees: Double((geometry.frame(in: .global).minX-20) / -10)), axis: (x: 0, y: 10, z: 0))
+                                CardItem(landMark: landmark,width: 160,height: 200).rotation3DEffect(Angle(degrees: Double((geometry.frame(in: .global).minX-20) / -10)), axis: (x: 0, y: 10, z: 0))
                             }
                         }.frame(width: 160, height: 270)
                     }
@@ -40,7 +40,7 @@ struct CategoryRowWithEffect_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        CategoryRowWithEffect(name:"Lakes",items:categories["Lakes"]!)
+        RowViewWithCard(name:"Lakes",items:categories["Lakes"]!)
         
 //        ForEach(categories.keys.sorted(), id: \.self) { key in
 //            CategoryRowWithEffect(name:key,items:categories[key]!)

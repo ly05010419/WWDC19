@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CategoryRow: View {
+struct RowView: View {
     var name:String
     var items:[Landmark]
     
@@ -20,7 +20,7 @@ struct CategoryRow: View {
                 HStack{
                     ForEach(self.items){landmark in
                         NavigationLink(destination: LandmarkDetail(landmark: landmark)){
-                            CategoryItem(landMark: landmark,width: 150,height: 150).padding(.leading,15).padding(.trailing,0).padding(.vertical,5)
+                            CardItem(landMark: landmark,width: 150,height: 150).padding(.leading,15).padding(.trailing,0).padding(.vertical,5)
                         }
                     }
                 }
@@ -39,7 +39,7 @@ struct CategoryRow_Previews: PreviewProvider {
     static var previews: some View {
         
         ForEach(categories.keys.sorted(), id: \.self) { key in
-            CategoryRow(name:key,items:categories[key]!)
+            RowView(name:key,items:categories[key]!)
                 .previewLayout(.fixed(width: UIScreen.main.bounds.size.width, height: 250))
         }
         

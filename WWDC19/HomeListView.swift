@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeListView: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink(destination: CategoryHome()){
+                NavigationLink(destination: WWDCHome()){
                     Text("Home")
                 }
                 NavigationLink(destination: LandmarkDetail(landmark: landmarkData[0])){
@@ -36,7 +36,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeListView()
     }
     
     

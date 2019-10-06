@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct WWDCHomeWithMenu: View {
     @State var schowProfile:Bool = false
     @State var show = false
     
@@ -22,11 +22,11 @@ struct HomeView: View {
                         .frame(height: 200)
                         .clipped()
                         .listRowInsets(EdgeInsets())
-                    CategoryRowWithEffect(name: "All",items: Array(landmarkData))
+                    RowViewWithCard(name: "All",items: Array(landmarkData))
                         .frame(height: 310)
                         .listRowInsets(EdgeInsets())
                     ForEach(categories.keys.sorted(), id: \.self) { key in
-                        CategoryRow(name: key, items: self.categories[key]!).listRowInsets(EdgeInsets())
+                        RowView(name: key, items: self.categories[key]!).listRowInsets(EdgeInsets())
                     }
                 }.navigationBarTitle(Text("Featured"),displayMode:.inline)
             }
@@ -108,6 +108,6 @@ struct Menu: Identifiable {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView().previewDevice(PreviewDevice(rawValue: "iPhone XR"))
+        WWDCHomeWithMenu().previewDevice(PreviewDevice(rawValue: "iPhone XR"))
     }
 }

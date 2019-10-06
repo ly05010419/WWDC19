@@ -14,7 +14,7 @@ struct LandmarkDetail: View {
                 .offset(CGSize(width: 0, height: -130))
                 .padding(.bottom, -130)
             Text(landmark.name)
-            CategoryRowWithEffect(name: "All",items: Array(landmarkData)).frame(height: 310).listRowInsets(EdgeInsets())
+            RowViewWithCard(name: "All",items: Array(landmarkData)).frame(height: 310).listRowInsets(EdgeInsets())
             Spacer()
         }.navigationBarTitle(Text(landmark.name),displayMode: .inline)
     }
